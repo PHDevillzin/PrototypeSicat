@@ -1,0 +1,5 @@
+{
+  "name": "User Management Dashboard",
+  "description": "A user management dashboard interface based on the provided design, featuring a header, navigation, and a user list with search and action controls.",
+  "requestFramePermissions": []
+}
