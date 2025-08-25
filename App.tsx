@@ -47,10 +47,12 @@ const App: React.FC = () => {
     }
 
     switch (activePage) {
-      case 'Cadastro':
+      case 'Adicionar Usuário':
         return <RegistrationForm onBackClick={() => setActivePage('Gerenciar Usuários')} />;
+      case 'Cadastro':
+        return <PlaceholderPage title="Cadastro" />;
       case 'Gerenciar Usuários':
-        return <UserManagement onAddUserClick={() => setActivePage('Cadastro')} onViewUserClick={handleViewUser} onEditUserClick={handleEditUser} />;
+        return <UserManagement onAddUserClick={() => setActivePage('Adicionar Usuário')} onViewUserClick={handleViewUser} onEditUserClick={handleEditUser} />;
       case 'Lista de terceiros':
         return <PlaceholderPage title="Lista de Terceiros" />;
       case 'Dashboard':
@@ -58,7 +60,7 @@ const App: React.FC = () => {
       case 'Gerenciar Empresas':
         return <PlaceholderPage title="Gerenciar Empresas" />;
       default:
-        return <UserManagement onAddUserClick={() => setActivePage('Cadastro')} onViewUserClick={handleViewUser} onEditUserClick={handleEditUser} />;
+        return <UserManagement onAddUserClick={() => setActivePage('Adicionar Usuário')} onViewUserClick={handleViewUser} onEditUserClick={handleEditUser} />;
     }
   };
 
